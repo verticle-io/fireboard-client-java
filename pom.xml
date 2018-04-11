@@ -29,6 +29,27 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>1.0-m5.1</version>
+                <configuration>
+                    <flowInitContext>
+                        <masterBranchName>master</masterBranchName>
+                        <developBranchName>develop</developBranchName>
+                        <featureBranchPrefix>feature/</featureBranchPrefix>
+                        <releaseBranchPrefix>release/</releaseBranchPrefix>
+                        <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+                        <versionTagPrefix>version/</versionTagPrefix>
+                    </flowInitContext>
+                    <username>jenssaade</username>
+                    <!--<password>PASSWORD_FOR_A_GIT_USER</password>-->
+                    <noDeploy>true</noDeploy>
+                    <squash>false</squash>
+                    <scmCommentPrefix>[RELEASE] </scmCommentPrefix>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
