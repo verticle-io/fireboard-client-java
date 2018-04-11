@@ -41,7 +41,7 @@
                         <featureBranchPrefix>feature/</featureBranchPrefix>
                         <releaseBranchPrefix>release/</releaseBranchPrefix>
                         <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
-                        <versionTagPrefix>version/</versionTagPrefix>
+                        <versionTagPrefix>/</versionTagPrefix>
                     </flowInitContext>
                     <username>jenssaade</username>
                     <!--<password>PASSWORD_FOR_A_GIT_USER</password>-->
