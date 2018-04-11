@@ -13,20 +13,20 @@ import java.util.logging.Logger;
  * Use the {{@link MessagePropertyHelper}} to create messages conveniently.
  *
  * Note that the following JDKs should be used to support the Letsencrypt CA out of the box.
- * Java 7 >= 7u111
- * Java 8 >= 8u101
+ * Java 7 &gt;= 7u111
+ * Java 8 &gt;= 8u101
  *
  * @author Jens Saade
  */
 public class FireboardClient {
 
-    protected final Logger logger = Logger.getLogger(this.getClass().getSimpleName());
+    private final Logger logger = Logger.getLogger(this.getClass().getSimpleName());
 
     private static FireboardClient instance;
 
     private FireboardAPIAccessor fireboardAPIAccessor;
 
-    Queue<Status> queue = new ConcurrentLinkedQueue<Status>();
+    private Queue<Status> queue = new ConcurrentLinkedQueue<Status>();
 
     /**
      * private constructor
@@ -43,7 +43,7 @@ public class FireboardClient {
 
     /**
      * static singleton
-     * @return
+     * @return FireboardClient
      */
     private static FireboardClient getStaticInstance(){
         if (instance == null){
@@ -55,7 +55,7 @@ public class FireboardClient {
 
     /**
      * post a {{@link Status}} message to fireboard
-     * @param status
+     * @param status status to post
      */
     public static void post(Status status){
         getStaticInstance().queue.add(status);
@@ -63,7 +63,7 @@ public class FireboardClient {
 
     /**
      * use lazy initialization if config is not provided via system properties
-     * @param config
+     * @param config config for lazy init
      */
     public static void lazyInit(FireboardAccessConfig config){
         getStaticInstance().fireboardAPIAccessor.lazyInit( config);

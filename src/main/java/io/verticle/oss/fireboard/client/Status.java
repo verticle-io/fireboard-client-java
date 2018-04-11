@@ -69,7 +69,16 @@ public class Status implements Serializable
 
     /**
      * Creates a new Status.
-     * 
+     * @param event event
+     * @param created timestamp
+     * @param uuid uuid
+     * @param ident identifier
+     * @param status status
+     * @param severity severity level
+     * @param category grouping category
+     * @param message detail message
+     * @param link back link
+     * @param messagePropertySection additional properties
      */
     public Status(String event, String created, String uuid, String ident, String status, String severity, String category, String message, String link, List<MessagePropertySection> messagePropertySection) {
         super();
