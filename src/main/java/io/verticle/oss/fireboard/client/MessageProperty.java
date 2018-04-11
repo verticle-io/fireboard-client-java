@@ -19,7 +19,8 @@ public class MessageProperty implements Serializable {
 
     /**
      * Creates a new MessageProperty.
-     * 
+     * @param name the key
+     * @param value the value
      */
     public MessageProperty(String name, String value) {
         super();

@@ -22,7 +22,9 @@ public class MessagePropertySection implements Serializable{
 
     /**
      * Creates a new MessagePropertySection.
-     * 
+     * @param name section name
+     * @param uuid section id
+     * @param messageProperties properties
      */
     public MessagePropertySection(String name, String uuid, List<MessageProperty> messageProperties) {
         super();
