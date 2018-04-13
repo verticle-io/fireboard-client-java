@@ -6,7 +6,7 @@
 
     <groupId>com.github.verticle-io</groupId>
     <artifactId>fireboard-client-java</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <packaging>jar</packaging>
 
